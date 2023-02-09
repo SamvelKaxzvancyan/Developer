@@ -140,4 +140,4 @@ general.addSecretary("Diana", "Papazyan")
 general.addManager("Lusine", "Kasemyan")
 general.addOrganizer("Hermine", "Manukyan")
 
-console.log(general,mains);
+console.log(general, mains);
