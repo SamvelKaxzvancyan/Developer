@@ -15,7 +15,7 @@ this.setSalary = function (amount){
 
 
 };
-}
+
 
 
 function School(name) {
