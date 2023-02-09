@@ -24,7 +24,7 @@ if(!new.target) {
  };
 this.name = name;
 this.teachers = [];
-this.isOPen = false
+this.isOpen = false
 this.open = function(){
   if (this.teachers.length>3){
     this.isOpen = true
@@ -66,22 +66,22 @@ this.addHistoryTeacher = function (name,surName){
 let number33 = new School("Տնտեսագիտական վարժարան");
 
 number33.open()
-console.log(number33.isOPen);
+console.log(number33.isOpen);
 number33.addMathTeacher("Armine", "Hakobyan",);
 number33.open()
-console.log(number33.isOPen);
+console.log(number33.isOpen);
 number33.addPhisicsTeacher("Hermine", "Iskandaryan");
 number33.open()
-console.log(number33.isOPen);
+console.log(number33.isOpen);
 number33.addRussianTeacher("Zara", "Genrikovna");
 number33.open()
-console.log(number33.isOPen);
+console.log(number33.isOpen);
 number33.addArmenianTeacher("Lina", "Zobyan");
 number33.open()
-console.log(number33.isOPen);
+console.log(number33.isOpen);
 number33.addHistoryTeacher("Liana", "Grigoryan")
 number33.open()
-console.log(number33.isOPen);
+console.log(number33.isOpen);
 
 console.log(number33,teachers);
 
