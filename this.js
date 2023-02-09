@@ -102,7 +102,7 @@ this.name = name
 this.mains = [];
 this.isAccept = false
 this.accept = function(){
-   if (tjis.general.salary<130000){
+   if (tհis.general.salary<130000){
      this.isAccept = true
    }else{
     console.log("not accept")
