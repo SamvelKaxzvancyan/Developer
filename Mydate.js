@@ -48,6 +48,7 @@ function MyDate(year, month, date, hours, minutes, seconds, ms) {
   }
   
   let date = new MyDate(2023, 2, 19, 4, 27, 35, 1000 )
+  //pordel em  amen amsatvin inch or mi arjeq gumarel ev tesnel ashxatum e te och:
   date.setFullYear(date.getFullYear() +3 );
   date.setMonth(date.getMonth() +5 );
   date.setDate(date.getDate() +7 );
