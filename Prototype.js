@@ -1,8 +1,5 @@
 let nature = {
   name: "nature",
-  tree: true,
-  land: true,
-  animals: true, 
 }
 
 
