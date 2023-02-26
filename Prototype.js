@@ -32,12 +32,6 @@ __proto__: sprout
 
 let animal = {
   name: "animal",
-  eat(food){
-
-  },
-  walk(){
-
-  },
 }
 
 let squirrel = {
