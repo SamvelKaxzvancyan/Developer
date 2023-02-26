@@ -30,6 +30,7 @@ __proto__: sprout
 };
 
 
+
 let animal = {
   name: "animal",
 }
@@ -81,4 +82,4 @@ __proto__:  fullsize
 
 
 squirrel.eat("nut")
-console.log(tail);
+console.log(tail, tree);
