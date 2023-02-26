@@ -13,10 +13,10 @@ __proto__: nature
 
 
 let sprout = {
-name: "sprout",
-root: true,
-leaves: true,
-__proto__: land
+  name: "sprout",
+  root: true,
+  leaves: true,
+  __proto__: land
   }
 
 
@@ -30,17 +30,18 @@ __proto__: sprout
 };
 
 
-
 let animal = {
-name: "animal",
-eat(food){
+  name: "animal",
+  eat(food){
 
-},
-walk(){
+  },
+  walk(){
+  
+  },
 }
 
 let squirrel = {
-name: "squirrel",
+ name: "squirrel",
 live: true,
 eat: true,
 walk: true,
@@ -55,20 +56,20 @@ __proto__: animal
 };
 
 let pregnancy = {
-day: 39,
-__proto__:  squirrel
+  day: 39,
+  __proto__:  squirrel
   };
   
-let kids = {
-weight: 15,
-numberkids: 5,
-__proto__: pregnancy
-};
+  let kids = {
+    weight: 15,
+    numberkids: 5,
+    __proto__: pregnancy
+    }
 
 let characterization = {
-name: "characterization",
- __proto__: kids
-};
+  name: "characterization",
+  __proto__: kids
+}
 
   
 let fullsize = {
