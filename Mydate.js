@@ -1,58 +1,93 @@
-function MyDate(year, month, date, hours, minutes, seconds, ms) {
-  this.year = year,
-  this.month = month,
-  this.date = date,
-  this.hours = hours,
-  this.minutes = minutes,
-  this.seconds = seconds,
-  this.ms = ms
-  this.getFullYear = function() {
-    return this.year
-  }
-  this.getMonth = function () {
-    return this.month
-  }
-  this.getDate = function() {
-    return this.date
-  }
-  this.getHours = function() {
-    return this.hours
-  }
-  this.getMinutes = function() {
-    return this.minutes
-  }
-  this.getSeconds = function () {
-    return this.seconds
-  }
-  this.getMilliseconds = function() {
-    return this.ms
-  }
-  this.setFullYear = function(value) {
-    this.year = value
-  }
-  this.setMonth = function(value) {
-    this.month = value
-  }
-  this.setDate = function (value) {
-    this.date = value
-  }
-  this.setHours = function(value) {
-    this.hours = value
-  }
-  this.setSeconds = function(value) {
-    this.seconds = value
-  }
-  this.setMilliseconds = function(value) {
-    this.ms = value
-  }
+let nature = {
+  name: "nature",
+  tree: true,
+  land: true,
+  animals: true, 
 }
 
 
-let date = new MyDate(2023, 2, 19, 4, 27, 35, 1000)
-date.setFullYear(date.getFullYear() + 3);
-date.setMonth(date.getMonth() + 15);
-date.setDate(date.getDate() + 6);
-date.setHours(date.getHours() + 24);
-date.setSeconds(date.getSeconds() + 120);
-date.setMilliseconds(date.getMilliseconds() + 3000);
-console.log(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds());
+let land = {
+name: "land",
+length: 250, 
+witdth: 150,
+humus: true,
+__proto__: nature
+};
+
+
+let sprout = {
+  name: "sprout",
+  root: true,
+  leaves: true,
+  __proto__: land
+  }
+
+
+let tree = {
+name: "tree",
+root: true,
+branches: true,
+leaves: true,
+fruit: true,
+__proto__: sprout
+};
+
+
+let animal = {
+  name: "animal",
+  eat(food){
+
+  },
+  walk(){
+
+  },
+}
+
+let squirrel = {
+ name: "squirrel",
+live: true,
+eat: true,
+walk: true,
+lifetime: 10,
+eat(food){
+
+},
+walk(){
+
+},
+__proto__: animal
+};
+
+let pregnancy = {
+  day: 39,
+  __proto__:  squirrel
+  };
+  
+  let kids = {
+    weight: 15,
+    numberkids: 5,
+    __proto__: pregnancy
+    }
+
+let characterization = {
+  name: "characterization",
+  __proto__: kids
+}
+
+  
+let fullsize = {
+name: "fullsize",
+legth: 23,
+__proto__: characterization
+};
+
+let tail = {
+name: "tail",
+legth: 15,
+weight: 30,
+__proto__:  fullsize
+};
+
+
+squirrel.eat("nut")
+console.log(tail);
