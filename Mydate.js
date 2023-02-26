@@ -1,59 +1,82 @@
-function MyDate(year, month, date, hours, minutes, seconds, ms) {
-    this.year = year,
-    this.month = month,
-    this.date = date,
-    this.hours = hours,
-    this.minutes = minutes,
-    this.seconds = seconds,
-    this.ms = ms
-    this.getFullYear = function() {
-      return this.year
-    }
-    this.getMonth = function () {
-      return this.month
-    }
-    this.getDate = function() {
-      return this.date
-    }
-    this.getHours = function() {
-      return this.hours
-    }
-    this.getMinutes = function() {
-      return this.minutes
-    }
-    this.getSeconds = function () {
-      return this.seconds
-    }
-    this.getMilliseconds = function() {
-      return this.ms
-    }
-    this.setFullYear = function(value) {
-      this.year = value
-    }
-    this.setMonth = function(value) {
-      this.month = value
-    }
-    this.setDate = function (value) {
-      this.date = value
-    }
-    this.setHours = function(value) {
-      this.hours = value
-    }
-    this.setSeconds = function(value) {
-      this.seconds = value
-    }
-    this.setMilliseconds = function(value) {
-      this.ms = value
-    }
-  }
-  
-  let date = new MyDate(2023, 2, 19, 4, 27, 35, 1000 )
-  //pordel em  amen amsatvin inch or mi arjeq gumarel ev tesnel ashxatum e te och:
-  date.setFullYear(date.getFullYear() +3 );
-  date.setMonth(date.getMonth() +5 );
-  date.setDate(date.getDate() +7 );
-  date.setHours(date.getHours() +48 );
-  date.setSeconds(date.getSeconds() +120 );
-  date.setMilliseconds(date.getMilliseconds() +3000 );
-  console.log(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds())
-  
+let nature = {
+  name: "nature",
+  tree: true,
+  land: true,
+  water: true,
+  animals: true, 
+}
+
+
+let land = {
+name: "land",
+length: 250, 
+witdth: 150,
+humus: true,
+__proto__: nature
+};
+
+let water = {
+name: "water",
+water: true,
+ __proto__: land
+};
+
+let sprout = {
+name: "sprout",
+root: true,
+leaves: true,
+__proto__: water
+}
+
+
+
+let tree = {
+name: "tree",
+root: true,
+branches: true,
+leaves: true,
+fruit: true,
+__proto__: sprout
+};
+
+let squirrel = {
+ name: "squirrel",
+live: true,
+eat: true,
+walk: true,
+lifetime: 10,
+eat(food){
+
+},
+walk(){
+
+},
+__proto__: tree
+};
+
+let fullsize = {
+name: "fullsize",
+legth: 23,
+__proto__: squirrel
+};
+
+let tail = {
+name: "tail",
+legth: 20,
+weight: 340,
+__proto__: fullsize
+};
+
+let pregnancy = {
+day: 39,
+__proto__: tail
+};
+
+let kids = {
+weight: 15,
+numberkids: 5,
+__proto__: pregnancy
+}
+
+squirrel.eat("nut")
+console.log(kids);
