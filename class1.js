@@ -37,8 +37,8 @@ class MyDate {
 
     set hour(value){
         this._hour = value
-        const addDate = parseInt(value / 60);
-        this.Hours = value % 60;
+        const addDate = parseInt(value / 24);
+        this.Hours = value % 24;
         this.Date(this.Date() + addDate);
     }
     get hour(){
