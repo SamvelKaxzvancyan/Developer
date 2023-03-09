@@ -36,8 +36,8 @@ let  mydate = {
     this.Month(this.Month() + addMonth);
   },
   set hour(value) {
-    const addDate = parseInt(value / 60);
-    this.Hours = value % 60;
+    const addDate = parseInt(value / 24);
+    this.Hours = value % 24;
     this.Date(this.Date() + addDate);
   },
   set minute(value) {
