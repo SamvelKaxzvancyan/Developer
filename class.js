@@ -31,6 +31,7 @@ class Month extends MyDate {
        this.getMonth = function(){
         return this.month;
        }
+        let MonthDays =[29, 30, 31, 28]
        this.setMonth = function(value){
        while (value > this.monthDays[this.month]) {
         this.fullyear++;;
@@ -61,8 +62,8 @@ class Hour extends MyDate {
             return this.hours;
         }
         this.setHours = function(value){
-        const addDate = parseInt(value / 60);
-        this.Hours = value % 60;
+        const addDate = parseInt(value / 24);
+        this.Hours = value % 24;
         this.Date(this.Date() + addDate);
         }
     }
