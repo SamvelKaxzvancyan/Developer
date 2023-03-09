@@ -25,7 +25,7 @@ class Year extends MyDate {
  };
 
 
-class Month extends Year {
+class Month extends MyDate {
     constructor(month){
         super(month);
        this.getMonth = function(){
@@ -40,7 +40,7 @@ class Month extends Year {
  };
 
 
-class Date extends Month {
+class Date extends MyDate {
     constructor(date){
         super(date);
         this.getDate = function(){
@@ -54,7 +54,7 @@ class Date extends Month {
     }
 };
 
-class Hour extends Date {
+class Hour extends MyDate {
     constructor(hours) {
         super(hours);
         this.getHours = function(){
@@ -68,7 +68,7 @@ class Hour extends Date {
     }
 };
 
-class Minute extends Hour {
+class Minute extends MyDate {
     constructor(minute){
         super(minute);
         this.getMinutes = function(){
@@ -82,7 +82,7 @@ class Minute extends Hour {
     }
 };
 
-class Second extends Minute {
+class Second extends MyDate {
     constructor(second){
         super(second);
         this.getSeconds = function(){
@@ -96,7 +96,7 @@ class Second extends Minute {
     }
 };
 
-class Millisecond extends Second {
+class Millisecond extends MyDate {
     constructor(millisecond){
         super(millisecond);
        this.getMillisecond = function(){
