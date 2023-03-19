@@ -29,7 +29,26 @@ setAlert(hours, minutes, seconds) {
         },((hours - this.hours) * 60 * 60 * 1000) + ((minutes - this.minutes) *60 * 1000)+ ((seconds - this.seconds) *1000));
     })
 }
-
+//2 tarberak
+//setAlert(hours, minutes, seconds) {
+  //  const alertTime = new Date();
+    //alertTime.setHours(hours);
+    //alertTime.setMinutes(minutes);
+    //alertTime.setSeconds(seconds);
+  
+ //   const currentTime = new Date();
+    //const timeDiff = alertTime.getTime() - currentTime.getTime();
+  
+   // if (timeDiff < 0) {
+      //return Promise.reject("Invalid alert time");
+    //}
+  
+    //return new Promise((resolve) => {
+      //setTimeout(() => {
+       // resolve();
+      //}, timeDiff);
+    //});
+  //}
 
 const erroHanlder = (error) => {
     console.log();
