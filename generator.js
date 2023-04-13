@@ -90,4 +90,4 @@ class Harc {
 }
 
 
-let game = new Game("StartMilioner");
+let game = new Game("Samvel");
