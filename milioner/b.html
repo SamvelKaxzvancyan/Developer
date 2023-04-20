@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .gamesymbol {
+         width: 1px;
+         display: flex;
+         align-items: center;
+         position: absolute;
+         top: 50px;
+         left: 32.5%;
+      }
+
+      .score {
+         height: 60px;
+         width: 500px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         top: 33%;
+         left: 35%;
+      }
+
+      .scoretext {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 15px;
+         left: 40%;
+      }
+
+      .question {
+         height: 65px;
+         width: 700px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 43%;
+         left: 30%;
+      }
+
+      .questiontext {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 15px;
+         left: 40%;
+      }
+
+      .answer1 {
+         height: 55px;
+         width: 300px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 53%;
+         left: 30%;
+      }
+
+      .answer1text {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 10px;
+         left: 3%;
+      }
+
+      .answer2 {
+         height: 55px;
+         width: 300px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 53%;
+         left: 50%;
+      }
+
+      .answer2text {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 10px;
+         left: 3%;
+      }
+
+      .answer3 {
+         height: 55px;
+         width: 300px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 63%;
+         left: 30%;
+      }
+
+      .answer3text {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 10px;
+         left: 3%;
+      }
+
+      .answer4 {
+         height: 55px;
+         width: 300px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 63%;
+         left: 50%;
+      }
+
+      .answer4text {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 10px;
+         left: 3%;
+      }
+
+      .half {
+         height: 60px;
+         width: 100px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 73%;
+         left: 39%;
+      }
+
+      .halftext {
+         color: white;
+         font-size: 25px;
+         position: absolute;
+         top: 15px;
+         left: 23%;
+      }
+
+      .phone {
+         height: 60px;
+         width: 100px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 73%;
+         left: 45%;
+      }
+
+      .phonesymbol {
+         color: white;
+         font-size: 35px;
+         position: absolute;
+         top: 3px;
+         left: 30%;
+      }
+
+      .audience {
+         height: 60px;
+         width: 100px;
+         border-radius: 40%;
+         border: 1px solid white;
+         background-color: black;
+         display: flex;
+         position: absolute;
+         top: 73%;
+         left: 51%;
+      }
+
+      .audiencesymbol {
+         color: white;
+         font-size: 45px;
+         position: absolute;
+         top: -3px;
+         left: 30%;
+      }
+
+      .hide {
+         opacity: 0;
+      }
+   </style>
+</head>
+
+<body bgcolor="black">
+   <div class="gamesymbol"><img src="./322_c144e2880b.png"></div>
+   <div class="score">
+      <div class="scoretext" id = "scoretext">Score</div>
+   </div>
+   <div class="question">
+      <div class="questiontext" id="question">Question</div>
+   </div>
+   <div class="answer1">
+      <div class="answer1text">ա)<span class="answerItem"></span></div>
+   </div>
+   <div class="answer2">
+      <div class="answer2text">բ)<span class="answerItem"></span></div>
+   </div>
+   <div class="answer3">
+      <div class="answer3text">գ)<span class="answerItem"></span></div>
+   </div>
+   <div class="answer4">
+      <div class="answer4text">դ)<span class="answerItem"></span></div>
+   </div>
+   <div class="half">
+      <div class="halftext">50:50</div>
+   </div>
+   <div class="phone">
+      <div class="phonesymbol" id="phone">&#9742;</div>
+   </div>
+   <div class="audience">
+      <div class="audiencesymbol" id="audience">&#128483;</div>
+   </div>
+   <script src="generator.js"></script>
+</body>
+
+</html>
