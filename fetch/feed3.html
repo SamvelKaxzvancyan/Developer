@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Feed</title>
+    <style>
+        .comment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .commentItem {
+            width: 700px;
+            height: 300px;
+            border-radius: 5px;
+            box-shadow: #999 2px 2px 2px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+
+        .z {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: absolute;
+            left: -10%;
+            width: 120%;
+            height: 100vh;
+            background: url(./bg.jpg);
+            background-size: cover;
+        }
+
+        .container #scane .layer {
+            position: absolute;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container #scane .layer img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Popins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, .2);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+            transition: .5s;
+        }
+
+        .header:hover::before {
+            left: 100%;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./fetch.js"></script>
+    <div class="comment" id="commentItem">
+
+
+        <div class="container">
+            <div id="scane">
+                <div class="layer" data-depth-x="-0.5" data-depth-y="0.25"><img src="./moon.png"></div>
+                <div class="layer" data-depth-x="0.15"><img src="./mountains02.png"></div>
+                <div class="layer" data-depth-x="0.25"><img src="./mountains01.png"></div>
+                <div class="layer" data-depth-x="-0.25"><img src="./road.png"></div>
+            </div>
+            <header class="header">
+                <a href="#" class="logo">Facebook</a>
+
+                <div class="navbar">
+                    <a href="#" onclick="window.location.href = './feed.html'">Home</a>
+                    <a href="#" onclick="window.location.href = './feed1.html'">Posts</a>
+                    <a href="#" onclick="window.location.href = './feed2.html'">Users</a>
+                    <a href="#" onclick="window.location.href = './feed3.html'">Comments</a>
+                    <a href="#" onclick="window.location.href = './feed4.html'">Photos</a>
+                </div>
+            </header>
+        </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"
+            integrity="sha512-/6TZODGjYL7M8qb7P6SflJB/nTGE79ed1RfJk3dfm/Ib6JwCT4+tOfrrseEHhxkIhwG8jCl+io6eaiWLS/UX1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            let scane = document.getElementById('scane');
+            let parallax = new Parallax(scane);
+        </script>
+        <script>
+            let toggleMenu = document.querySelector('.toggleMenu');
+            let navigation = document.querySelector('.navigation');
+            toggleMenu.onclick = function () {
+                navigation.classList.toggle('active');
+            }
+        </script>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
